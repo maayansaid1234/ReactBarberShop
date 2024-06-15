@@ -1,0 +1,49 @@
+.appointments-container {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+.appointments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appointment-item {
+    background-color: #cae9f4;
+    color:rgb(53, 127, 217);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#stickyDiv{
+position: sticky;
+top:90px;
+z-index: 999;
+background-color:#cae9f4;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  
+    /* .submits{
+     width: 15vw;
+     font-size:large;
+    } */
+    #stickyDiv{
+        top:200px;
+       
+    }
+  
+  }
+
+
+
+
