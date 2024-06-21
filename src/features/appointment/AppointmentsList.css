@@ -15,8 +15,8 @@ h1 {
 }
 
 .appointment-item {
-    background-color: #cae9f4;
-    color:rgb(53, 127, 217);
+    background-color: azure;
+    /* background-color: rgb(69, 195, 195); */
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 10px 0;
@@ -27,7 +27,7 @@ h1 {
 position: sticky;
 top:90px;
 z-index: 999;
-background-color:#cae9f4;
+background-color:azure;
 }
 
 
@@ -39,6 +39,7 @@ background-color:#cae9f4;
     } */
     #stickyDiv{
         top:200px;
+       
        
     }
   

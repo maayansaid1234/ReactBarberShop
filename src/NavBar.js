@@ -70,7 +70,7 @@ const NavBar = () => {
             name="addAppointment"
             as={NavLink}
             to="/addAppointment"
-            activeClassName="active"
+            
             onClick={() => handleItemClick('/addAppointment')}
           >
         לקביעת תור
@@ -84,7 +84,7 @@ const NavBar = () => {
           name="appointments"
           as={NavLink}
           to="/appointments"
-          activeClassName="active"
+         
           onClick={() => handleItemClick('/appointments')}
         >
           רשימת התורים
@@ -95,7 +95,7 @@ const NavBar = () => {
           name="login"
           as={NavLink}
           to="/login"
-          activeClassName="active"
+        
           onClick={() => handleItemClick('/login')}
         >
           להתחברות

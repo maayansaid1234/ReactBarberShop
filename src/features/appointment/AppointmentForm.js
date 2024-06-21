@@ -34,7 +34,7 @@ const AppointmentForm = ({ func ,item}) => {
     const date = `${year}-${month}-${day}`;
     const time = `${hours}:${minutes}`;
 ///------//
-  const { control, register, handleSubmit, setValue, 
+  const { control, handleSubmit, setValue, 
     formState: { errors,isValid } } = useForm({
       
     defaultValues: {

@@ -33,7 +33,7 @@ export const getUserName = () => {
     //     method: "GET",
     //     credentials: "include" // This is the equivalent of withCredentials: true
     // });
-    return axios.get(baseUrl+"/GetUserName ")
+    return axios.get(baseUrl+"/GetUserNameFromSession ")
    
    
 }

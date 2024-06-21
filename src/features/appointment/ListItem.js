@@ -83,15 +83,15 @@ const ListItem = ({ item,fetchData}) => {
 
     return (
         <Segment.Group raised>
-            <Segment onClick={() => setOpen(true)} style={{ cursor: 'pointer' }}>
+            <Segment  onClick={() => setOpen(true)} style={{ cursor: 'pointer',backgroundColor:"rgb(241, 236, 236)" }}>
                 
                 
                 <p>מועד התור: {formatDate(item.appointmentTime)} בשעה {formatTime2(item.appointmentTime)}</p>
-                <p>שם הלקוח: {item.userName}</p>
-                <p>סוג התספורת: {item.haircutType}</p>
+                <p> {item.userName} : שם הלקוח  </p>
+                <p>{item.haircutType} : סוג התספורת</p>
                
-                {item.userName==user&&<Icon name="trash" color='black' onClick={handleDelete} />}
-                {item.userName==user&&<Icon name="edit" color='black' onClick={()=>navigate("/editAppointment/"+item.id,
+                {item.userName==user&&<Icon name="trash" style={{"color":"rgb(69, 195, 195)"}} onClick={handleDelete} />}
+                {item.userName==user&&<Icon name="edit"style={{"color":"rgb(69, 195, 195)"}}  onClick={()=>navigate("/editAppointment/"+item.id,
                       { state: { item: item } }
                 )} />}
             </Segment>
