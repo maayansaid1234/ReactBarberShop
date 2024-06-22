@@ -9,7 +9,7 @@ import { ToastContainer } from 'react-toastify';
 import { Route ,Routes} from 'react-router-dom';
 import NavBar from "./NavBar"
 import ProtectedRouteForUser from "./ProtectedRouteForUser"
-import { getUserName } from './features/user/userApi';
+import { getUserFromSession } from './features/user/userApi';
 import { useDispatch } from 'react-redux';
 import { saveUser } from './features/user/userSlice';
 import { useState } from 'react';
@@ -19,16 +19,12 @@ function App() {
  const dispatch=useDispatch();
   let [x,setX]=useState(null)
 
-  getUserName().then(res=>{
-   
-     // if( res.status==200)
-setX(true)
+  getUserFromSession().then(res=>{
+          setX(true)
      console.log(res)
       dispatch(saveUser(res.data))
      }
      )
-
-   
   .catch(err=>setX(true))
 
   return (

@@ -39,7 +39,7 @@ const SignUp = () => {
 
 
             addUser(user).then(res => {
-                dispatch(saveUser(res.data.userName));
+                dispatch(saveUser(res.data));
 
                 navigate("/appointments");
                 setShowLoading(false);

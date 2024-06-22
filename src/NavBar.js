@@ -12,7 +12,7 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((st) => st.user.currentUser);
-  let userName=user;
+  let userName=user?.userName;
   const handleItemClick = (path) => {
     navigate(path);
   };

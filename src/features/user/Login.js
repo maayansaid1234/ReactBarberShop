@@ -30,7 +30,7 @@ const Login = () => {
     {
       setShowLoading(true);
         login(data).then(res =>{
-           dispatch(saveUser(res.data.userName)); 
+           dispatch(saveUser(res.data)); 
           console.log(res.data)
            navigate("/appointments")
         setShowLoading(false)}).catch((err)=> {

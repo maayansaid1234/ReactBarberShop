@@ -90,8 +90,8 @@ const ListItem = ({ item,fetchData}) => {
                 <p> {item.userName} : שם הלקוח  </p>
                 <p>{item.haircutType} : סוג התספורת</p>
                
-                {item.userName==user&&<Icon name="trash" style={{"color":"rgb(69, 195, 195)"}} onClick={handleDelete} />}
-                {item.userName==user&&<Icon name="edit"style={{"color":"rgb(69, 195, 195)"}}  onClick={()=>navigate("/editAppointment/"+item.id,
+                {item.userId==user.id&&<Icon name="trash" style={{"color":"rgb(69, 195, 195)"}} onClick={handleDelete} />}
+                {item.userId==user.id&&<Icon name="edit"style={{"color":"rgb(69, 195, 195)"}}  onClick={()=>navigate("/editAppointment/"+item.id,
                       { state: { item: item } }
                 )} />}
             </Segment>

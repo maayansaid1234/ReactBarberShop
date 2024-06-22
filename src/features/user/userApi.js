@@ -23,17 +23,13 @@ export const logout = () => {
         method: "GET",
         credentials: "include" // This is the equivalent of withCredentials: true
     });
-    // return axios.get(baseUrl+"/Logout"
-    // )
+   
 }
 
-export const getUserName = () => {
+export const getUserFromSession = () => {
 
-    // return fetch(baseUrl + "/GetUserName", {
-    //     method: "GET",
-    //     credentials: "include" // This is the equivalent of withCredentials: true
-    // });
-    return axios.get(baseUrl+"/GetUserNameFromSession ")
+   
+    return axios.get(baseUrl+"/GetUserFromSession ")
    
    
 }
