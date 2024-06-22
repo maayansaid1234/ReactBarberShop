@@ -33,6 +33,11 @@ const AppointmentForm = ({ func ,item}) => {
   
     const date = `${year}-${month}-${day}`;
     const time = `${hours}:${minutes}`;
+    let today=new Date();
+    const yearOfToday = today.getFullYear();
+    const monthOfToday = String(today.getMonth() + 1).padStart(2, '0');
+    const dayOfToday = String(today.getDate()).padStart(2, '0');
+    today=`${yearOfToday}-${monthOfToday}-${dayOfToday}`;
 ///------//
   const { control, handleSubmit, setValue, 
     formState: { errors,isValid } } = useForm({
@@ -100,7 +105,7 @@ const AppointmentForm = ({ func ,item}) => {
               label="תאריך"
               type="date"
               InputLabelProps={{ shrink: true }}
-              inputProps={{ min: date}}
+              inputProps={{ min: today}}
               error={!!errors.date}
               helperText={errors.date ? errors.date.message : ""}
               sx={{ mb: 2 }}
